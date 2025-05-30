@@ -47,11 +47,9 @@ export default function HeroSection() {
           </h1>
           <h2 className="md:text-lg mt-4 md:text-left text-justify">
             I{"'"}m a <span className="font-bold">full-stack developer</span>{" "}
-            and a Penn State CS graduate. My passion for software has introduced
-            me to many technical concepts with a proficiency in ReactJS and
-            TypeScript. Having an eye for visuals with UI/UX design and a strong
-            background in backend development, I engage in web and mobile apps
-            that I find interesting and innovative.
+            and a Penn State CS graduate. Having an eye for visuals with UI/UX
+            design and a strong background in backend development, I engage in
+            web and mobile apps that I find interesting and innovative.
           </h2>
           <div className="gap-2 flex flex-wrap mt-8 justify-center md:justify-start">
             {socials.map((social) => (

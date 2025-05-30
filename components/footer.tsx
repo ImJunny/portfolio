@@ -22,7 +22,7 @@ export default function Footer() {
               Want to reach out?
             </span>
             <span className="text-background">
-              You can contact me via email or phone!
+              Feel free to contact me via email or phone
             </span>
           </div>
 

@@ -54,13 +54,17 @@ export default function SkillsSection() {
     },
     { title: "Docker", slug: "docker", redirect: "https://www.docker.com/" },
     { title: "TRPC", slug: "trpc", redirect: "https://trpc.io/" },
-    { title: "Figma", slug: "figma", redirect: "https://figma.com/" },
-    { title: "S3", slug: "amazons3", redirect: "https://aws.amazon.com/s3/" },
     {
-      title: "Drizzle ORM",
-      slug: "drizzle",
-      redirect: "https://orm.drizzle.team/",
+      title: "Amazon S3",
+      slug: "amazons3",
+      redirect: "https://aws.amazon.com/s3/",
     },
+    {
+      title: "Postman",
+      slug: "postman",
+      redirect: "https://www.postman.com/",
+    },
+    { title: "Figma", slug: "figma", redirect: "https://figma.com/" },
   ];
 
   return (
@@ -68,9 +72,9 @@ export default function SkillsSection() {
       <h1 className="text-xl uppercase font-semibold md:text-left text-center">
         Skills + Tech
       </h1>
-      <h2 className="md:text-lg mt-2 md:text-left text-justify">
-        Check out some technology I{"'"}ve used over the years.
-      </h2>
+      <p className="md:text-lg mt-2 md:text-left text-center">
+        Check out some of the technology I{"'"}ve used over the years.
+      </p>
 
       {/* Desktop Grid */}
       <div className="hidden md:grid grid-cols-4 mt-6 md:grid-cols-4 lg:grid-cols-6 gap-4">

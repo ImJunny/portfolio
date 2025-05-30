@@ -12,7 +12,7 @@ export function CarouselThumb(props: {
 
   return (
     <div
-      className={cn("flex-[0_0_20%] aspect-square", selected ? "border-2" : "")}
+      className={cn("flex-[0_0_15%] aspect-square", selected ? "border-2" : "")}
     >
       <button
         onClick={onClick}

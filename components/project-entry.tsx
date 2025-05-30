@@ -1,7 +1,9 @@
-import { ChevronRight } from "lucide-react";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 import Carousel from "./carousel/carousel";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
+import { Book, Github, Globe } from "lucide-react";
 
 type ProjectEntryProps = {
   data: {
@@ -9,28 +11,62 @@ type ProjectEntryProps = {
     date: string;
     description: string;
     main_tags: string[];
-    tags: string[];
     redirect?: string;
     images?: string[];
+    repo?: string;
+    blog?: string;
   };
 };
 
 export type ProjectEntryType = ProjectEntryProps["data"];
 
 export default function ProjectEntry({ data }: ProjectEntryProps) {
-  const { description, images } = data;
+  const { description, images, repo, redirect, blog } = data;
   const SLIDES = images ? images : [];
 
   return (
-    <div className="grid grid-cols:1 md:grid-cols-2 gap-x-8 gap-y-4">
+    <Card className="border-background/30 p-4 gap-4 md:p-6 md:gap-6 bg-foreground grid grid-cols:1 md:grid-cols-2  text-background">
       <ProjectEntryHeader data={data} className="sm:hidden" />
 
       <Carousel slides={SLIDES} />
       <div className="flex flex-col sm:gap-2">
         <ProjectEntryHeader data={data} className="hidden sm:block" />
-        <p>{description}</p>
+        <p className="whitespace-pre-wrap">{description}</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
+          {blog && (
+            <Button
+              className="border-background/30 bg-foreground text-background border-1"
+              asChild
+            >
+              <Link href={blog} target="_blank">
+                <Book /> Read more
+              </Link>
+            </Button>
+          )}
+          {repo && (
+            <Button
+              className="border-background/30 bg-foreground text-background border-1"
+              asChild
+            >
+              <Link href={repo} target="_blank">
+                <Github /> View repository
+              </Link>
+            </Button>
+          )}
+          {redirect && (
+            <Button
+              className="border-background/30 bg-foreground text-background border-1"
+              asChild
+            >
+              <Link href={redirect} target="_blank">
+                <Globe /> Visit site
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
-    </div>
+    </Card>
   );
 }
 
@@ -38,22 +74,11 @@ function ProjectEntryHeader({
   className,
   data,
 }: ProjectEntryProps & { className?: string }) {
-  const { title, date, main_tags, redirect } = data;
+  const { title, date, main_tags } = data;
 
   return (
     <div className={className}>
-      {redirect ? (
-        <Link
-          href={redirect}
-          target="_blank"
-          className="inline-flex gap-2 items-center"
-        >
-          <h1 className="text-xl font-semibold">{title}</h1>
-          <ChevronRight className="transition-transform group-hover:translate-x-1" />
-        </Link>
-      ) : (
-        <h1 className="text-xl font-semibold">{title}</h1>
-      )}
+      <h1 className="text-xl font-semibold">{title}</h1>
       <h2>{date}</h2>
       <div className="flex gap-2 mt-2 flex-wrap">
         {main_tags.map((tag) => (
