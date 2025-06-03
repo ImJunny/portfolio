@@ -4,15 +4,18 @@ export default function Section({
   children,
   className,
   background,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   background?: React.ReactNode;
+  id?: string;
 }) {
   return (
     <section
+      id={id}
       className={cn(
-        `relative flex justify-center px-4 sm:px-8 py-8 sm:py-16 border-foreground/10 border-b-1`,
+        `scroll-mt-16 relative flex justify-center px-4 sm:px-8 py-8 sm:py-16 border-foreground/10 border-b-1`,
         className
       )}
     >

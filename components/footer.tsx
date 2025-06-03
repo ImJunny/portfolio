@@ -1,27 +1,15 @@
-import { cn } from "@/lib/utils";
-import { GeistMono } from "geist/font/mono";
-import React from "react";
 import Section from "./section";
 
 export default function Footer() {
   return (
     <footer>
-      <Section className="bg-black">
-        <div className="flex justify-between flex-col sm:flex-row gap-4 items-center">
-          <span
-            className={cn(
-              GeistMono.className,
-              "text-4xl font-semibold text-background text-center hidden sm:block"
-            )}
-          >
-            JNN
-          </span>
-
+      <Section className="bg-black" id="contact-section">
+        <div className="flex flex-col gap-4 items-center">
           <div className="flex flex-col">
             <span className="text-background text-xl font-semibold text-center">
               Want to reach out?
             </span>
-            <span className="text-background">
+            <span className="text-background lg:text-lg">
               Feel free to contact me via email or phone
             </span>
           </div>

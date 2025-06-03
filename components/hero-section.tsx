@@ -30,7 +30,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <Section className="md:min-h-120 items-center">
+    <Section className="md:min-h-120 items-center" id="about-section">
       <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-16 items-center">
         <div className="flex flex-col">
           <h1
@@ -45,7 +45,7 @@ export default function HeroSection() {
               cursorClassName="h-10 invisible"
             />
           </h1>
-          <h2 className="md:text-lg mt-4 md:text-left text-justify">
+          <h2 className="lg:text-lg mt-4 md:text-left text-justify">
             I{"'"}m a <span className="font-bold">full-stack developer</span>{" "}
             and a Penn State CS graduate. Having an eye for visuals with UI/UX
             design and a strong background in backend development, I engage in

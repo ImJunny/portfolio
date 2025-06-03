@@ -54,37 +54,26 @@ export default function SkillsSection() {
     },
     { title: "Docker", slug: "docker", redirect: "https://www.docker.com/" },
     { title: "TRPC", slug: "trpc", redirect: "https://trpc.io/" },
-    {
-      title: "Amazon S3",
-      slug: "amazons3",
-      redirect: "https://aws.amazon.com/s3/",
-    },
-    {
-      title: "Postman",
-      slug: "postman",
-      redirect: "https://www.postman.com/",
-    },
     { title: "Figma", slug: "figma", redirect: "https://figma.com/" },
   ];
 
   return (
-    <Section background={<SquareGridBackground />}>
+    <Section background={<SquareGridBackground />} id="skills-section">
       <h1 className="text-xl uppercase font-semibold md:text-left text-center">
         Skills + Tech
       </h1>
-      <p className="md:text-lg mt-2 md:text-left text-center">
+      <p className="lg:text-lg mt-2 md:text-left text-center">
         Check out some of the technology I{"'"}ve used over the years.
       </p>
 
-      {/* Desktop Grid */}
-      <div className="hidden md:grid grid-cols-4 mt-6 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {skills.map((skill, index) => (
+      {/* Mobile Grid — always show first 6 */}
+      <div className="hidden lg:grid lg:grid-cols-6 gap-4 mt-6">
+        {skills.slice(0, 6).map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
       </div>
-
       {/* Mobile Grid — always show first 4 */}
-      <div className="md:hidden grid grid-cols-2 gap-4 mt-6">
+      <div className="lg:hidden grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
         {skills.slice(0, 4).map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
@@ -92,13 +81,18 @@ export default function SkillsSection() {
 
       {/* Animated expansion for remaining skills */}
       <motion.div
-        className="md:hidden overflow-hidden"
+        className="overflow-hidden"
         initial={false}
         animate={{ maxHeight: expanded ? 1000 : 0 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <div>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="lg:hidden grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            {skills.slice(4).map((skill, index) => (
+              <SkillCard key={index} skill={skill} />
+            ))}
+          </div>
+          <div className="hidden lg:grid grid-cols-6 gap-4 mt-4">
             {skills.slice(4).map((skill, index) => (
               <SkillCard key={index} skill={skill} />
             ))}
@@ -107,7 +101,7 @@ export default function SkillsSection() {
       </motion.div>
 
       {/* Toggle Button */}
-      <div className="md:hidden mt-4 flex justify-center">
+      <div className="mt-4 flex justify-center">
         <Button variant="outline" onClick={() => setExpanded((prev) => !prev)}>
           {expanded ? "View less" : "View all"}
           <ChevronDown
