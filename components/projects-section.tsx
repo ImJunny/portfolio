@@ -13,7 +13,14 @@ export default function ProjectSection() {
       description:
         "Hustle is social media app that allows people to quickly find jobs and services. Improving upon existing services in the quick-gig industry, it aims to provide a community of productivity. It features precise geocoding, financial transactions, P2P communication, algorithmic feeds, AI, and more. The app also supports both iOS and Android devices.",
       main_tags: ["Mobile", "React Native", "Closed Source"],
-      images: ["/hustle/hustle-1.png"],
+      images: [
+        "/hustle/hustle-1.png",
+        "/hustle/hustle-2.png",
+        "/hustle/hustle-3.png",
+        "/hustle/hustle-4.png",
+        "/hustle/hustle-5.png",
+      ],
+
       blog: "https://www.linkedin.com/posts/john-nhat-nguyen-29252021a_capstone-development-thankyou-activity-7323815129463013376-MB0_?utm_source=share&utm_medium=member_desktop&rcm=ACoAADc__44Bwbl0IsvjZ0MJj_aeW0XTGvFMnw4",
     },
     {

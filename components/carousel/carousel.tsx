@@ -50,7 +50,7 @@ const Carousel = (props: CarouselProps) => {
 
   return (
     <div>
-      <div className="overflow-hidden" ref={emblaMainRef}>
+      <div className="overflow-hidden rounded-md" ref={emblaMainRef}>
         <div className="flex">
           {slides.map((url: string, index: number) => (
             <div className="flex-[0_0_100%]" key={index}>
@@ -63,7 +63,7 @@ const Carousel = (props: CarouselProps) => {
                         width={800}
                         height={800}
                         alt={`Slide ${url}`}
-                        className="w-full h-full rounded-md aspect-video object-cover"
+                        className="w-full h-full aspect-video object-cover"
                       />
                     </DialogTrigger>
                     <DialogContent className="p-4 flex-col items-end bg-zinc-900 sm:max-w-screen lg:max-w-screen-xl rounded-sm border-0 flex [&>button]:hidden">
