@@ -6,7 +6,7 @@ export default function Footer() {
       <Section className="bg-black" id="contact-section">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex flex-col">
-            <span className="text-background text-xl font-semibold text-center">
+            <span className="text-2xl tracking-tighter font-semibold text-center text-background">
               Want to reach out?
             </span>
             <span className="text-background lg:text-lg">

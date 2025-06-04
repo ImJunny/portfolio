@@ -28,7 +28,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="bg-background h-16 items-center flex justify-center border-b-1 border-foreground/10 px-4 sm:px-8 sticky top-0 z-50">
+    <nav className="bg-background h-16 items-center flex justify-center border-b-1 px-4 sm:px-8 sticky top-0 z-50">
       <div className="flex max-w-6xl w-full">
         <h1 className={cn(GeistMono.className, "text-xl font-semibold")}>
           JNN

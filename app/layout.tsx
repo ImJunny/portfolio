@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
-      <body className={`${GeistSans.className} antialiased`}>
+      <body
+        className={`${GeistSans.className} antialiased`}
+        suppressHydrationWarning
+      >
         {children}
         <Toaster />
       </body>

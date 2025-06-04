@@ -35,7 +35,7 @@ export default function HeroSection() {
         <div className="flex flex-col">
           <h1
             className={cn(
-              "text-3xl md:text-4xl tracking-tighter text-center md:text-left"
+              "text-3xl md:text-4xl tracking-tighter text-center md:text-left font-semibold"
             )}
           >
             <TypingText

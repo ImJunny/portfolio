@@ -66,20 +66,22 @@ const Carousel = (props: CarouselProps) => {
                         className="w-full h-full rounded-md aspect-video object-cover"
                       />
                     </DialogTrigger>
-                    <DialogContent className=" bg-zinc-900 h-[90vh] sm:max-w-screen lg:max-w-screen-lg rounded-sm border-0 flex items-center justify-center">
-                      <DialogClose className="absolute top-4 right-4 rounded-full hover:cursor-pointer">
+                    <DialogContent className="p-4 flex-col items-end bg-zinc-900 sm:max-w-screen lg:max-w-screen-xl rounded-sm border-0 flex [&>button]:hidden">
+                      <DialogHeader className="sr-only">
+                        <DialogTitle>Hidden dialog title</DialogTitle>
+                      </DialogHeader>
+                      <DialogClose
+                        className="rounded-full hover:cursor-pointer"
+                        asChild
+                      >
                         <X className="text-background" />
                       </DialogClose>
-                      <DialogHeader>
-                        <DialogTitle className="sr-only">
-                          Hidden dialog title
-                        </DialogTitle>
-                      </DialogHeader>
                       <Image
                         src={slides[index]}
+                        alt={`image-${url}`}
                         width={1400}
                         height={1400}
-                        alt={`image-${url}`}
+                        className="w-full h-full max-w-[90vw] max-h-[90vh] object-contain rounded-md"
                       />
                     </DialogContent>
                   </Dialog>

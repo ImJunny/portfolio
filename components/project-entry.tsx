@@ -31,7 +31,7 @@ export default function ProjectEntry({ data }: ProjectEntryProps) {
       inView
       fade
     >
-      <Card className="border-background/30 p-4 gap-4 md:p-6 md:gap-6 bg-foreground grid grid-cols:1 md:grid-cols-2  text-background">
+      <Card className="border-border-dark p-4 gap-4 md:p-6 md:gap-6 bg-foreground grid grid-cols:1 md:grid-cols-2  text-background">
         <ProjectEntryHeader data={data} className="sm:hidden" />
 
         {images ? <Carousel slides={images} /> : null}
@@ -46,7 +46,7 @@ export default function ProjectEntry({ data }: ProjectEntryProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
             {blog && (
               <Button
-                className="border-background/30 bg-foreground text-background border-1"
+                className="border-border-dark bg-foreground text-background border-1"
                 asChild
               >
                 <Link href={blog} target="_blank">
@@ -56,7 +56,7 @@ export default function ProjectEntry({ data }: ProjectEntryProps) {
             )}
             {repo && (
               <Button
-                className="border-background/30 bg-foreground text-background border-1"
+                className="border-border-dark bg-foreground text-background border-1"
                 asChild
               >
                 <Link href={repo} target="_blank">
@@ -66,7 +66,7 @@ export default function ProjectEntry({ data }: ProjectEntryProps) {
             )}
             {redirect && (
               <Button
-                className="border-background/30 bg-foreground text-background border-1"
+                className="border-border-dark bg-foreground text-background border-1"
                 asChild
               >
                 <Link href={redirect} target="_blank">

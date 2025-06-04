@@ -59,7 +59,7 @@ export default function SkillsSection() {
 
   return (
     <Section background={<SquareGridBackground />} id="skills-section">
-      <h1 className="text-xl uppercase font-semibold md:text-left text-center">
+      <h1 className="text-2xl tracking-tighter md:text-left text-center font-semibold">
         Skills + Tech
       </h1>
       <p className="lg:text-lg mt-2 md:text-left text-center">
@@ -122,7 +122,7 @@ function SkillCard({
     <Link href={skill.redirect} target="_blank" className="relative">
       <div className="rounded-lg overflow-hidden relative">
         <div className="bg-background absolute inset-0 z-0 pointer-events-none" />
-        <Card className="flex items-center justify-center relative z-10 hover:bg-secondary/40">
+        <Card className="flex items-center justify-center relative z-10 hover:bg-muted">
           <CardContent className="flex flex-col gap-2 items-center justify-center">
             <img
               height="32"

@@ -31,8 +31,8 @@ export default function ResumeSection() {
       <Card>
         <CardContent className="flex flex-col items-center">
           <div>
-            <h1 className="text-xl uppercase font-semibold text-center">
-              Peep my resume
+            <h1 className="text-2xl tracking-tighter font-semibold text-center">
+              Peep my resume!
             </h1>
             <p className="text-center mt-2">
               You can download it{" "}
@@ -46,8 +46,11 @@ export default function ResumeSection() {
               .
             </p>
           </div>
-          <div ref={containerRef} className="mt-4 max-w-xl w-full">
-            <Document file="/resume.pdf" className="shadow-md border-1">
+          <div
+            ref={containerRef}
+            className="mt-4 max-w-xl w-full shadow-md border-1 border-border"
+          >
+            <Document file="/resume.pdf" className="">
               <Page pageNumber={1} width={containerWidth} />
             </Document>
           </div>

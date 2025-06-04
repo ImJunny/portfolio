@@ -15,7 +15,7 @@ export default function Section({
     <section
       id={id}
       className={cn(
-        `scroll-mt-16 relative flex justify-center px-4 sm:px-8 py-8 sm:py-16 border-foreground/10 border-b-1`,
+        `scroll-mt-16 relative flex justify-center px-4 sm:px-8 py-8 sm:py-16 border-b-1`,
         className
       )}
     >

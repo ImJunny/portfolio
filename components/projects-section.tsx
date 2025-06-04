@@ -57,7 +57,7 @@ export default function ProjectSection() {
 
   return (
     <Section className="bg-zinc-900 text-white" id="projects-section">
-      <h1 className="text-xl uppercase font-semibold md:text-left text-center">
+      <h1 className="text-2xl tracking-tighter md:text-left text-center font-semibold">
         Featured Projects
       </h1>
       <h2 className="lg:text-lg mt-2 md:text-left text-center">
@@ -70,10 +70,10 @@ export default function ProjectSection() {
           </div>
         ))}
       </div>
-      <Separator className="mt-16 bg-background/30" />
+      <Separator className="mt-16 bg-border-dark" />
       <div className="mt-8 sm:mt-16 flex flex-col gap-4">
         <div>
-          <h1 className="text-xl font-semibold text-center">
+          <h1 className="text-2xl tracking-tighter text-center font-semibold">
             Want to see more?
           </h1>
           <h2 className="lg:text-lg mt-2 text-center">
