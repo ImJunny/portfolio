@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { motion } from "motion/react";
@@ -17,7 +19,6 @@ export interface AnimatedGridPatternProps
   height?: number;
   x?: number;
   y?: number;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   strokeDasharray?: any;
   numSquares?: number;
   maxOpacity?: number;
@@ -35,6 +36,7 @@ export function AnimatedGridPattern({
   className,
   maxOpacity = 0.5,
   duration = 4,
+  repeatDelay = 0.5,
   ...props
 }: AnimatedGridPatternProps) {
   const id = useId();
