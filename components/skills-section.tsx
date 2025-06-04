@@ -66,20 +66,17 @@ export default function SkillsSection() {
         Check out some of the technology I{"'"}ve used over the years.
       </p>
 
-      {/* Mobile Grid — always show first 6 */}
       <div className="hidden lg:grid lg:grid-cols-6 gap-4 mt-6">
         {skills.slice(0, 6).map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
       </div>
-      {/* Mobile Grid — always show first 4 */}
       <div className="lg:hidden grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
         {skills.slice(0, 4).map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
       </div>
 
-      {/* Animated expansion for remaining skills */}
       <motion.div
         className="overflow-hidden"
         initial={false}
@@ -100,7 +97,6 @@ export default function SkillsSection() {
         </div>
       </motion.div>
 
-      {/* Toggle Button */}
       <div className="mt-4 flex justify-center">
         <Button variant="outline" onClick={() => setExpanded((prev) => !prev)}>
           {expanded ? "View less" : "View all"}

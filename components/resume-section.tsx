@@ -7,6 +7,7 @@ import { pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import { useEffect, useRef, useState } from "react";
+import { MotionEffect } from "./animate-ui/effects/motion-effect";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -28,34 +29,41 @@ export default function ResumeSection() {
 
   return (
     <Section background={<FlickeringGridBackground />} id="resume-section">
-      <Card>
-        <CardContent className="flex flex-col items-center">
-          <div>
-            <h1 className="text-2xl tracking-tighter font-semibold text-center">
-              Peep my resume!
-            </h1>
-            <p className="text-center mt-2">
-              You can download it{" "}
-              <a
-                href="/resume.pdf"
-                download
-                className="font-semibold underline hover:text-blue-600 transition-colors"
-              >
-                here
-              </a>
-              .
-            </p>
-          </div>
-          <div
-            ref={containerRef}
-            className="mt-4 max-w-xl w-full shadow-md border-1 border-border"
-          >
-            <Document file="/resume.pdf" className="">
-              <Page pageNumber={1} width={containerWidth} />
-            </Document>
-          </div>
-        </CardContent>
-      </Card>
+      <MotionEffect
+        inView
+        fade
+        slide={{ direction: "left", offset: 100 }}
+        transition={{ type: "tween", delay: 0.2 }}
+      >
+        <Card>
+          <CardContent className="flex flex-col items-center">
+            <div>
+              <h1 className="text-2xl tracking-tighter font-semibold text-center">
+                Peep my resume!
+              </h1>
+              <p className="text-center mt-2 text-lg">
+                You can download it{" "}
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="font-semibold underline hover:text-blue-600 transition-colors"
+                >
+                  here
+                </a>
+                .
+              </p>
+            </div>
+            <div
+              ref={containerRef}
+              className="mt-4 max-w-xl w-full shadow-md border-1 border-border"
+            >
+              <Document file="/resume.pdf" className="">
+                <Page pageNumber={1} width={containerWidth} />
+              </Document>
+            </div>
+          </CardContent>
+        </Card>
+      </MotionEffect>
     </Section>
   );
 }
