@@ -57,7 +57,7 @@ const Carousel = (props: CarouselProps) => {
               <div className="flex items-center justify-center text-6xl font-semibold select-none">
                 {slides.length > 0 ? (
                   <Dialog>
-                    <DialogTrigger className="hover:cursor-pointer">
+                    <DialogTrigger className="hover:cursor-pointer w-full h-full">
                       <Image
                         src={slides[index]}
                         width={800}
