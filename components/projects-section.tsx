@@ -19,6 +19,7 @@ export default function ProjectSection() {
         "/hustle/hustle-3.png",
         "/hustle/hustle-4.png",
         "/hustle/hustle-5.png",
+        "/hustle/hustle-6.png",
       ],
 
       blog: "https://www.linkedin.com/posts/john-nhat-nguyen-29252021a_capstone-development-thankyou-activity-7323815129463013376-MB0_?utm_source=share&utm_medium=member_desktop&rcm=ACoAADc__44Bwbl0IsvjZ0MJj_aeW0XTGvFMnw4",
