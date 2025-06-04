@@ -79,8 +79,8 @@ const Carousel = (props: CarouselProps) => {
                       <Image
                         src={slides[index]}
                         alt={`image-${url}`}
-                        width={1400}
-                        height={1400}
+                        width={2000}
+                        height={2000}
                         className="w-full h-full max-w-[90vw] max-h-[90vh] object-contain rounded-md"
                       />
                     </DialogContent>

@@ -42,7 +42,15 @@ export default function ProjectSection() {
         "Audio Aura is a web application that takes inspiration from Spotify's annual Wrapped feature, displaying to users a visualization of their listening trends. Users can listen to snippets of their top songs and filter trends by different time periods. (NOTE: This project is live, but has not been updated since. Bugs are expected to occur.)",
       main_tags: ["Web", "React", "Open Source"],
       redirect: "https://audioaura.onrender.com/",
-      images: ["/audio-aura/audio-aura-1.png"],
+      images: [
+        "/audio-aura/audio-aura-1.png",
+        "/audio-aura/audio-aura-2.png",
+        "/audio-aura/audio-aura-3.png",
+        "/audio-aura/audio-aura-4.png",
+        "/audio-aura/audio-aura-5.png",
+        "/audio-aura/audio-aura-6.png",
+        "/audio-aura/audio-aura-7.png",
+      ],
       repo: "https://github.com/ImJunny/audio-aura-v1",
     },
     {
