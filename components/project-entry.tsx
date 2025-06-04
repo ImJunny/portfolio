@@ -16,13 +16,14 @@ type ProjectEntryProps = {
     images?: string[];
     repo?: string;
     blog?: string;
+    awards?: string[];
   };
 };
 
 export type ProjectEntryType = ProjectEntryProps["data"];
 
 export default function ProjectEntry({ data }: ProjectEntryProps) {
-  const { description, images, repo, redirect, blog } = data;
+  const { description, images, repo, redirect, blog, awards } = data;
 
   return (
     <MotionEffect
@@ -42,6 +43,20 @@ export default function ProjectEntry({ data }: ProjectEntryProps) {
           <p className="whitespace-pre-wrap text-sm lg:text-base">
             {description}
           </p>
+
+          {awards && (
+            <div className="mt-2">
+              <h3 className="font-semibold text-sm lg:text-base">Awards</h3>
+              {awards.map((award, index) => (
+                <li
+                  key={index}
+                  className="text-sm lg:text-base list-disc list-inside indent-[-1.25rem] ml-8"
+                >
+                  {award}
+                </li>
+              ))}
+            </div>
+          )}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
             {blog && (

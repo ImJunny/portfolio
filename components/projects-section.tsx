@@ -21,7 +21,10 @@ export default function ProjectSection() {
         "/hustle/hustle-5.png",
         "/hustle/hustle-6.png",
       ],
-
+      awards: [
+        "1st Place, PSU Harrisburg 2025 Capstone Design Conference (CS)",
+        "3rd Place, PSU Harrisburg Spring 2025 LaunchBox Startup Weekend",
+      ],
       blog: "https://www.linkedin.com/posts/john-nhat-nguyen-29252021a_capstone-development-thankyou-activity-7323815129463013376-MB0_?utm_source=share&utm_medium=member_desktop&rcm=ACoAADc__44Bwbl0IsvjZ0MJj_aeW0XTGvFMnw4",
     },
     {

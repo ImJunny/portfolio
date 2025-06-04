@@ -55,6 +55,16 @@ export default function SkillsSection() {
     { title: "Docker", slug: "docker", redirect: "https://www.docker.com/" },
     { title: "TRPC", slug: "trpc", redirect: "https://trpc.io/" },
     { title: "Figma", slug: "figma", redirect: "https://figma.com/" },
+    {
+      title: "Android Studio",
+      slug: "androidstudio",
+      redirect: "https://developer.android.com/studio",
+    },
+    {
+      title: "Xcode",
+      slug: "xcode",
+      redirect: "https://developer.apple.com/xcode/",
+    },
   ];
 
   return (
