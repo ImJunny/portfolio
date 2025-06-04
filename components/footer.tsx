@@ -3,7 +3,7 @@ import Section from "./section";
 export default function Footer() {
   return (
     <footer>
-      <Section className="bg-black" id="contact-section">
+      <Section className="bg-black border-0" id="contact-section">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex flex-col">
             <span className="text-2xl tracking-tighter font-semibold text-center text-background">

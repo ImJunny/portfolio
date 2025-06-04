@@ -14,6 +14,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 export default function ResumeSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(1000);
+  const [pdfRendered, setPdfRendered] = useState<boolean>(false);
 
   useEffect(() => {
     const updateWidth = () => {
@@ -30,12 +31,16 @@ export default function ResumeSection() {
   return (
     <Section background={<FlickeringGridBackground />} id="resume-section">
       <MotionEffect
+        slide={{ direction: "left", offset: 50 }}
+        transition={{ type: "tween", delay: 0.2 }}
         inView
         fade
-        slide={{ direction: "left", offset: 100 }}
-        transition={{ type: "tween", delay: 0.2 }}
       >
-        <Card>
+        <Card
+          className={`${
+            pdfRendered ? "w-fit" : "w-full"
+          } mx-auto transition-all duration-300`}
+        >
           <CardContent className="flex flex-col items-center">
             <div>
               <h1 className="text-2xl tracking-tighter font-semibold text-center">
@@ -55,10 +60,14 @@ export default function ResumeSection() {
             </div>
             <div
               ref={containerRef}
-              className="mt-4 max-w-xl w-full shadow-md border-1 border-border"
+              className="mt-4 max-w-2xl w-full shadow-md border border-border overflow-hidden"
             >
-              <Document file="/resume.pdf" className="">
-                <Page pageNumber={1} width={containerWidth} />
+              <Document file="/resume.pdf">
+                <Page
+                  pageNumber={1}
+                  width={containerWidth}
+                  onLoadSuccess={() => setPdfRendered(true)}
+                />
               </Document>
             </div>
           </CardContent>
