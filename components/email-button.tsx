@@ -20,7 +20,7 @@ export default function EmailButton() {
       document.execCommand("copy");
       document.body.removeChild(textArea);
     }
-    toast("Email copied to clipboard!");
+    toast("Email copied to clipboard!", { position: "top-right" });
   };
 
   return (
