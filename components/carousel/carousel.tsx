@@ -20,6 +20,7 @@ type CarouselProps = {
 
 const Carousel = (props: CarouselProps) => {
   const { slides, options } = props;
+  console.log(slides);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
