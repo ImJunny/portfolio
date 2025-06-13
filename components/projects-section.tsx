@@ -11,8 +11,8 @@ export default function ProjectSection() {
       title: "Hustle",
       date: "Dec 2024 - Present",
       description:
-        "Hustle is social media app that allows people to quickly find jobs and services. Improving upon existing services in the quick-gig industry, it aims to provide a community of productivity. It features precise geocoding, financial transactions, P2P communication, algorithmic feeds, AI, and more. The app also supports both iOS and Android devices.",
-      main_tags: ["Mobile", "React Native", "Closed Source"],
+        "Hustle is a social media app that allows people to quickly find jobs and services. Improving upon existing services in the quick-gig industry, it aims to provide a community of productivity. It features precise geocoding, financial transactions, P2P communication, algorithmic feeds, AI, and more. The app supports both iOS and Android devices.",
+      main_tags: ["Mobile", "React Native"],
       images: [
         "/hustle/hustle-1.png",
         "/hustle/hustle-2.png",
@@ -31,7 +31,7 @@ export default function ProjectSection() {
       title: "HackPSH",
       date: "Aug 2023 - December 2024",
       description:
-        "HackPSH is a web platform used for IEEE's hackathons at Penn State Harrisburg for three semesters. It allows users to view general information about the event, organization, and sponsors. Using the platform, participants are able to register, create teams, complete coding challenges, and track scores, easing the management process for event adminstrators.",
+        "HackPSH is a web platform used for IEEE's hackathons at Penn State Harrisburg for three semesters. It allows users to view general information about the event, organization, and sponsors. Using the platform, participants are able to register, create teams, complete coding challenges, and track scores. Event administrators can manage users and teams and create coding problems with a custom DSL (domain-specific language).",
       main_tags: ["Web", "React", "Open Source"],
       redirect: "https://ieee.hackpsh.org/",
       images: [
@@ -43,6 +43,7 @@ export default function ProjectSection() {
         "/hackpsh/hackpsh-6.png",
         "/hackpsh/hackpsh-7.png",
         "/hackpsh/hackpsh-8.png",
+        "/hackpsh/hackpsh-9.png",
       ],
       repo: "https://github.com/IEEE-PSH/hackpsh-web",
     },
@@ -51,7 +52,7 @@ export default function ProjectSection() {
       date: "May 2023 - July 2023",
       description:
         "Audio Aura is a web application that takes inspiration from Spotify's annual Wrapped feature, displaying to users an animated visualization of their listening trends. Users can listen to snippets of their top songs and filter trends by different timeframes.",
-      main_tags: ["Web", "React", "Open Source"],
+      main_tags: ["Web", "React"],
       redirect: "https://audioaura.onrender.com/",
       images: [
         "/audio-aura/audio-aura-1.png",
@@ -69,7 +70,7 @@ export default function ProjectSection() {
       title: "Dangledood",
       date: "May 2023 - May 2023",
       description: `Dangledood is a web application for the Hangman game, hence the name "Dangledood". It was written with HTML, CSS, and JavaScript, featuring a random word API and hand-drawn visuals.`,
-      main_tags: ["Web", "React", "Open Source"],
+      main_tags: ["Web", "React"],
       images: ["/dangledood/dangledood-1.png", "/dangledood/dangledood-2.png"],
       repo: "https://github.com/ImJunny/dangledood",
     },
