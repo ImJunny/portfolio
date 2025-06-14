@@ -44,6 +44,8 @@ export default function ProjectSection() {
         "/hackpsh/hackpsh-7.png",
         "/hackpsh/hackpsh-8.png",
         "/hackpsh/hackpsh-9.png",
+        "/hackpsh/hackpsh-10.png",
+        "/hackpsh/hackpsh-11.png",
       ],
       repo: "https://github.com/IEEE-PSH/hackpsh-web",
     },
